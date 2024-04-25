@@ -1,6 +1,10 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 body {
     display: grid;
-    grid-template-rows: 2fr .5fr 6fr 3fr;
+    grid-template-rows: 2.5fr .5fr 6.7fr 4.2fr;
     grid-template-columns: 3fr 1fr;
 }
 
@@ -13,6 +17,7 @@ body {
 
 h1 {
     margin: 0px;
+    padding: .5rem;
 }
 
 h1, footer {
@@ -25,7 +30,7 @@ h1, footer {
     flex: 1 1 auto;
     text-align: center;
     color: #81fdd4;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: .5rem;
 }
 
