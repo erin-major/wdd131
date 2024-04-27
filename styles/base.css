@@ -47,7 +47,9 @@ footer {
 }
 
 #lastModified {
-    margin: 0px 0px 24px;    
+    margin: 0px 0px 24px;
+    font-size: .5em;
+    font-style: italic;    
 }
 
 #currentyear {
