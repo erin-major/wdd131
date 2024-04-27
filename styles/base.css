@@ -16,20 +16,17 @@
     --nav-hover-background-color: ;
 }
 
-* {
-    text-align: center;
-}
-
 header, footer {
     background-color: var(--primary-color);
     display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
 }
 
 h1 {
     font-family: var(--heading-font);
     font-weight: 400;
-    font-size: 3em;   
+    font-size: 3em; 
 }
 
 nav {
@@ -72,20 +69,18 @@ main {
 h2 {
     margin: 0px;
     background-color: var(--accent2-color);
-    border-bottom: 5px solid black;
-    grid-column: 1/3;
+    border-bottom: 2px solid var(--accent2-color);
     font-size: 2em;
 }
 
 h2, h3 {
     font-family: var(--heading-font);
+    text-align: center;
+    grid-column: 1/3;
 }
 
 h3 {
-    
-    text-align: center;
     font-size: 1.5em;
-    grid-column: 1/3;
 }
 
 h3:after {
@@ -94,22 +89,24 @@ h3:after {
     margin: 0 auto; 
     width: 80%; 
     padding-top: 5px; 
-    border-bottom: 1px solid black; 
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .card {
-    border: 4px solid black;
+    border: 3px solid var(--accent2-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .me, .home {
     display: grid;
     grid-template-rows: .5fr 2fr;
-    grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
 }
 
-.me img, .home img {
+img {
     float: right;
     width: 150px;
     height: auto;
@@ -117,8 +114,34 @@ h3:after {
     padding: 1.5em;
 }
 
-.home img {
-    float: left;
+figure {
+    text-align: center;
+    font-style: italic;
+    grid-column: 1/2;
+}
+
+.home p {
+    grid-column: 2/3;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+}
+
+li {
+    font-size: 1.5em;
+    padding: .5em;
+}
+
+.card a {
+    color: black;
+}
+
+.card a:hover {
+    color: var(--primary-color);
 }
 
 main p {
@@ -127,7 +150,6 @@ main p {
     padding: 1em;
     font-size: 1.3em;
     margin: 0px;
-    text-align: left;
 }
 
 
