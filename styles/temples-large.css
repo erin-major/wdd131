@@ -1,0 +1,10 @@
+@media screen and (min-width: 800px) {
+
+    
+    .pictures {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+        place-items: center;
+    }
+}
