@@ -20,7 +20,6 @@ header, footer {
 
 header {
     grid-template-columns: 1fr 3fr;
-    
 }
 
 footer {
@@ -29,18 +28,35 @@ footer {
 
 h1 {
     font-weight: 400;
-    font-size: 3em; 
+    font-size: 2.5em;
+    padding: 0px 30px;
 }
 
-nav {
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: black;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+    content: "☰"
+}
+
+#menu.open::before {
+    content: "❌"
+}
+
+.navigation {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 30px;
+    flex-direction: column;
 }
 
-nav a {
-    flex: 1 1 auto;
+.navigation a {
+    display: none;
     font-size: 2em;
     padding: .4em 0em;
     text-decoration: none;
@@ -49,19 +65,46 @@ nav a {
     background-color: var(--tertiary-color);
 }
 
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: underline var(--accent1-color);
+}
+
+.open a {
+    display: block;
+}
+
 main {
     max-width: 1000px;
     margin: 5px auto;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--heading-font);
+}
+
 .pictures {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-nav a:hover {
-    background-color: var(--secondary-color);
-    text-decoration: underline var(--accent1-color);
+figure {
+    margin: 0px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    padding-top: .5rem;
+    font-family: var(--paragraph-font);
 }
 
 footer {
@@ -76,26 +119,4 @@ footer {
 
 #currentyear {
     margin: 24px 0px 0px;  
-}
-
-img {
-    max-width: 200px;
-    align-self: center;
-}
-
-figure {
-    justify-content: center;
-    align-items: center; 
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-}
-
-figcaption {
-    font-style: italic;
-    text-align: center;
-    padding-top: .5rem;
-    font-family: var(--paragraph-font);
 }
