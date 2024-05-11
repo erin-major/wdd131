@@ -136,6 +136,7 @@ footer {
         max-width: 50px;
         background-color: var(--primary-color);
         border-radius: 0px 10px 10px 0px;
+        padding-left: 0px;
     }
 
     .weather h2 {
