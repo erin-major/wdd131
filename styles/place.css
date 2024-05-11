@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Reddit+Sans+Condensed:wght@200..900&display=swap');
+
+:root {
+    --primary-color: #C20000;
+    --secondary-color: #FFFFFF;
+    --tertiary-color: #191919;
+    --accent1-color: #85877C;
+    --accent2-color: #FCEFEF;
+
+    --heading-font: 'Quicksand', sans-serif;
+    --paragraph-font: 'Reddit Sans Condensed', sans-serif;
+}
+
+header, footer {
+    background-color: var(--primary-color); 
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+header {
+    border-bottom: 25px solid var(--tertiary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    padding-top: 2rem;
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    display: grid;
+    font-family: var(--paragraph-font);
+    text-align: center;
+    gap: 0px;
+}
+
+.weather img {
+    max-width: 75px;
+    border-bottom: none;
+    margin: 10px 0px;
+}
+
+.weather h2 {
+    margin-bottom: 0px;
+}
+
+table {    
+    margin: auto; /* Optionally center the table horizontally */
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+th {
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+td {
+    text-align: left;
+}
+
+footer {
+    font-size: 1.5em;
+    display: grid;
+    border-top: 30px solid var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+#lastModified {
+    margin: 0px 0px 24px;
+    font-size: .5em;
+    font-style: italic;    
+}
+
+#currentyear {
+    margin: 24px 0px 0px;  
+}
+
+@media screen and (max-width: 650px) {
+
+    picture {
+        grid-row: 1/2;
+    }
+
+    .data {
+        grid-row: 2/3;
+        border-bottom: 3px solid var(--accent2-color);
+    }
+
+    .weather {
+        grid-row: 3/4;
+    }
+    
+    img {
+        border-bottom: 10px solid var(--primary-color);
+    }
+
+}
