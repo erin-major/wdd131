@@ -11,7 +11,8 @@
     --paragraph-font: 'Lato', sans-serif;
 }
 
-header, footer {
+header,
+footer {
     background-color: var(--primary-color);
     display: grid;
     font-family: var(--heading-font);
@@ -33,13 +34,13 @@ h1 {
 }
 
 #menu {
-	font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: black;
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: black;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 #menu::before {
@@ -79,17 +80,36 @@ main {
     margin: 5px auto;
 }
 
-h2, h3 {
+h2,
+h3 {
     text-align: center;
     font-family: var(--heading-font);
 }
 
-h2 { 
+h2 {
     font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+table {
+    font-size: .8rem;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    font-family: var(--paragraph-font);
+}
+
+th {
+    text-align: right;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+td {
+    text-align: left;
+    padding-bottom: 5px;
 }
 
 .album {
@@ -100,14 +120,16 @@ h3 {
 
 figure {
     margin: 0px;
-    border: 2px solid gray;    
-    height: 330px;
-    text-align: center;      
+    border: 2px solid var(--accent2-color);
+    text-align: center;
+    background-color: var(--accent1-color);
 }
 
 figure img {
     max-width: 90%;
     height: auto;
+    border: 3px solid var(--accent2-color);
+    border-radius: 5px;
 }
 
 footer {
@@ -117,9 +139,9 @@ footer {
 #lastModified {
     margin: 0px 0px 24px;
     font-size: .5em;
-    font-style: italic;    
+    font-style: italic;
 }
 
 #currentyear {
-    margin: 24px 0px 0px;  
+    margin: 24px 0px 0px;
 }

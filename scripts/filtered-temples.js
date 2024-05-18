@@ -1,5 +1,10 @@
 const year = document.querySelector("#currentyear");
 const modifiedDate = document.querySelector("#lastModified");
+const home = document.querySelector('#home');
+const old = document.querySelector('#old');
+const newTemple = document.querySelector('#newTemple');
+const large = document.querySelector('#large');
+const small = document.querySelector('#small');
 
 const today = new Date();
 
@@ -25,7 +30,7 @@ const temples = [
     },
     {
       templeName: "Manti Utah",
-      location: "Manti, Utah, United States",
+      location: "Manti, Utah, USA",
       dedicated: "1888, May, 21",
       area: 74792,
       imageUrl:
@@ -33,7 +38,7 @@ const temples = [
     },
     {
       templeName: "Payson Utah",
-      location: "Payson, Utah, United States",
+      location: "Payson, Utah, USA",
       dedicated: "2015, June, 7",
       area: 96630,
       imageUrl:
@@ -49,7 +54,7 @@ const temples = [
     },
     {
       templeName: "Washington D.C.",
-      location: "Kensington, Maryland, United States",
+      location: "Kensington, Maryland, USA",
       dedicated: "1974, November, 19",
       area: 156558,
       imageUrl:
@@ -73,7 +78,7 @@ const temples = [
     },
     {
         templeName: "London England",
-        location: "Newchapel, Surrey, England",
+        location: "Surrey, England",
         dedicated: "1958, September, 7",
         area: 42652,
         imageUrl:
@@ -81,7 +86,7 @@ const temples = [
       },
       {
         templeName: "San Diego California",
-        location: "San Diego, California, United States",
+        location: "San Diego, California, USA",
         dedicated: "1993, April, 25",
         area: 72000,
         imageUrl:
@@ -89,7 +94,7 @@ const temples = [
       },
       {
         templeName: "Provo City Center",
-        location: "Provo, Utah, United States",
+        location: "Provo, Utah, USA",
         dedicated: "2016, March, 20",
         area: 85084,
         imageUrl:
@@ -97,8 +102,9 @@ const temples = [
       },
   ];
 
-  function displayTemplate(temples) {
-    const html = temples.map(
+function displayTemplate(filteredTemples) {
+    document.querySelector('.album').innerHTML = "";
+    const html = filteredTemples.map(
         (temple) => `
         <figure>
             <h3>${temple.templeName}</h3>
@@ -118,8 +124,28 @@ const temples = [
             </table>
             <img loading="lazy" src="${temple.imageUrl}" alt="${temple.templeName}">
         </figure>`
-    );
-    document.querySelector('.album').innerHTML = html.join("");
+  );
+  document.querySelector('.album').innerHTML = html.join("");
 };
 
 displayTemplate(temples);
+
+old.addEventListener('click', () => {    
+    displayTemplate(temples.filter(temple => temple.dedicated.startsWith("18")));
+});
+
+newTemple.addEventListener('click', () => {    
+    displayTemplate(temples.filter(temple => temple.dedicated.startsWith("20")));
+});
+
+large.addEventListener('click', () => {    
+    displayTemplate(temples.filter(temple => temple.area > 90000));
+});
+
+small.addEventListener('click', () => {
+    displayTemplate(temples.filter(temple => temple.area < 10000));
+});
+
+home.addEventListener('click', () => {
+    displayTemplate(temples);
+});
