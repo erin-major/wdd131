@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --primary-color: #E27396;
+    --secondary-color: #EA9AB2;
+    --tertiary-color: #EFCFE3;
+    --accent1-color: #EAF2D7;
+    --accent2-color: #B3DEE2;
+
+    --heading-font: 'Oswald', sans-serif;
+    --paragraph-font: 'Lato', sans-serif;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    display: grid;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+header {
+    grid-template-columns: 1fr 3fr;
+}
+
+footer {
+    grid-template-columns: 1fr;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5em;
+    padding: 0px 30px;
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: black;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+    content: "☰"
+}
+
+#menu.open::before {
+    content: "❌"
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    display: none;
+    font-size: 2em;
+    padding: .4em 0em;
+    text-decoration: none;
+    color: black;
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+}
+
+.navigation a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: underline var(--accent1-color);
+}
+
+.open a {
+    display: block;
+}
+
+main {
+    max-width: 1000px;
+    margin: 5px auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--heading-font);
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+figure {
+    margin: 0px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    padding-top: .5rem;
+    font-family: var(--paragraph-font);
+}
+
+footer {
+    font-size: 1.5em;
+}
+
+#lastModified {
+    margin: 0px 0px 24px;
+    font-size: .5em;
+    font-style: italic;    
+}
+
+#currentyear {
+    margin: 24px 0px 0px;  
+}

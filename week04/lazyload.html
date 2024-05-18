@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading</title>
+    <meta name="description" content="A page to view how lazy loading works">
+    <meta name="author" content="Erin Major">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lazy Loading</h1>
+    </header>
+    <main>
+        <picture>
+            <img loading="lazy" src="images/clouds.webp" alt="white clouds and a blue sky with a hint of an airplane wing>
+        </picture>
+        <picture>
+            <img loading="lazy" src="images/forest.webp" alt="a forest of trees">
+        </picture>
+        <picture>
+            <img loading="lazy" src="images/mountain.webp" alt="a mountain with a y and construction in the foregroud">
+        </picture>
+        <picture>
+            <img loading="lazy" src="images/pond.webp" alt="a pond with ducks">
+        </picture>
+        <picture>
+            <img loading="lazy" src="images/river.webp" alt="a river with dead trees around it>
+        </picture>
+        <picture>
+            <img loading="lazy" src="images/thames.webp" alt="the thames river">
+        </picture>
+    </main>
+    <footer>
+        <span id="currentyear"></span>
+        <p id="lastModified">Last Modified</p>
+    </footer>
+</body>
+</html>

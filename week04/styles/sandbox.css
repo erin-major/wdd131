@@ -1,0 +1,30 @@
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+    font-weight: bold;
+}
+
+thead th {
+    background-color: gold;
+}
+
+tr:nth-child(even) {
+    background-color: antiquewhite;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: small;
+    font-style: italic;
+    padding: 5px;
+}
