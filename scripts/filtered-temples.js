@@ -116,7 +116,7 @@ const temples = [
                     <td>${temple.area} sq ft</td>
                 </tr>
             </table>
-            <img src="${temple.imageUrl}" alt="${temple.templeName} loading="lazy">
+            <img loading="lazy" src="${temple.imageUrl}" alt="${temple.templeName}">
         </figure>`
     );
     document.querySelector('.album').innerHTML = html.join("");
