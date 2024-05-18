@@ -100,13 +100,14 @@ h3 {
 
 figure {
     margin: 0px;
-    border: 2px solid gray;
-    text-align: center;
+    border: 2px solid gray;    
+    height: 330px;
+    text-align: center;      
 }
 
 figure img {
     max-width: 90%;
-    height: auto;    
+    height: auto;
 }
 
 footer {
