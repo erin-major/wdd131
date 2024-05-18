@@ -99,12 +99,27 @@ const temples = [
 
   function displayTemplate(temples) {
     const html = temples.map(
-        (temple) => `<tr>
-        <td>${section.sectionNum}</td>
-        <td>${section.roomNum}</td>
-        <td>${section.enrolled}</td>
-        <td>${section.days}</td>
-        <td>${section.instructor}</td></tr>`
+        (temple) => `
+        <figure>
+            <h3>${temple.templeName}</h3>
+            <table>
+                <tr>
+                    <th>Location:</th>
+                    <td>${temple.location}</td>
+                </tr>
+                <tr>
+                    <th>Dedicated: </th>
+                    <td>${temple.dedicated}</td>
+                <tr>
+                <tr>
+                    <th>Size:</th>
+                    <td>${temple.area} sq ft</td>
+                </tr>
+            </table>
+            <img src="${temple.imageUrl}" alt="${temple.templeName} loading="lazy">
+        </figure>`
     );
-    document.querySelector('#sections').innerHTML = html.join("");
+    document.querySelector('.album').innerHTML = html.join("");
 };
+
+displayTemplate(temples);

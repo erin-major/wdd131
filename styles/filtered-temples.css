@@ -79,13 +79,20 @@ main {
     margin: 5px auto;
 }
 
-h2 {
+h2, h3 {
     text-align: center;
-    font-size: 2rem;
     font-family: var(--heading-font);
 }
 
-.pictures {
+h2 { 
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.album {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -93,18 +100,13 @@ h2 {
 
 figure {
     margin: 0px;
+    border: 2px solid gray;
+    text-align: center;
 }
 
 figure img {
-    max-width: 100%;
-    height: auto;
-}
-
-figcaption {
-    font-style: italic;
-    text-align: center;
-    padding-top: .5rem;
-    font-family: var(--paragraph-font);
+    max-width: 90%;
+    height: auto;    
 }
 
 footer {
