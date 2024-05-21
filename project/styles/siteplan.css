@@ -12,10 +12,12 @@
 
 main {
     margin-left: 2rem;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 h1, h2, h3, .heading {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font);    
 }
 
 h2 {
