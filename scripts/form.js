@@ -1,15 +1,34 @@
 const year = document.querySelector("#currentyear");
 const modifiedDate = document.querySelector("#lastModified");
-
+const productDropdown = document.querySelector("#productOptions");
+const leaveReview = document.querySelector("input[type='submit']");
 
 const today = new Date();
 
 year.innerHTML = `©️ <span id="currentyear">${today.getFullYear()}</span> | Erin Major | Utah, United States`;
 modifiedDate.innerHTML = `Last Modification: ${today}`;
 
+function displayProducts(products) {
+    const html = products.map(
+        (product) => `
+        <option value="${product.id}">${product.name}</option>`
+    );
+    productDropdown.innerHTML = html.join("");
+};
 
+leaveReview.addEventListener('click', () => {   
+    const visits = localStorage.getItem("numberOfSubmits");
 
-
+    if (visits == null) {        
+        localStorage.setItem("numberOfSubmits", "1");
+    }
+    
+    else {
+        let visitsNum = parseInt(visits);
+        visitsNum += 1;
+        localStorage.setItem("numberOfSubmits", visitsNum.toString());
+    };
+});
 
 const products = [
     {
@@ -38,6 +57,3 @@ const products = [
       averagerating: 5.0
     }
   ];
-
-// The remaining options are created dynamically using a provided product array.
-// Each option must have a value attribute that is the product name.
