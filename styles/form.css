@@ -38,7 +38,7 @@ body {
     max-width: 800px;
 }
 
-label, span {
+label, .optional {
     display: block;
     padding-top: 1rem;
 }
