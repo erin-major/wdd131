@@ -70,14 +70,6 @@ div {
     margin-right: 10px;
 }
 
-.review input:required, select:required {
-    border-bottom: 5px solid var(--primary-color);
-}
-
-.review input:required:valid {
-    border: 1px solid var(--accent2-color);
-}
-
 .review input[type="submit"] {
     border: none;
     background-image: linear-gradient(var(--primary-color), var(--secondary-color));
