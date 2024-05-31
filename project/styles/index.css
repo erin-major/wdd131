@@ -50,6 +50,7 @@ nav a {
     font-size: 1.5rem;
     padding: 1.5rem;
     text-decoration: none;
+    color: var(--font-color);
 }
 
 nav a:first-child {
