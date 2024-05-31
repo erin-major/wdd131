@@ -67,6 +67,13 @@ nav a:visited {
     color: var(--font-color);
 }
 
+#quote {
+    font-family: var(--paragraph-font);
+}
+
+.text {
+    font-style: italic;
+}
 
 /* #menu {
     font-size: 1.5rem;
