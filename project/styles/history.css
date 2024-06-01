@@ -102,7 +102,7 @@ main {
 }
 
 .event:nth-child(even) {
-    border-left: 5px solid black;
+    border-left: 5px solid var(--secondary-color);
     grid-column: 2/3;
     padding-left: 1rem;
 }
