@@ -93,32 +93,31 @@ main {
     background-color: var(--background-color);
     font-family: var(--paragraph-font);
     color: var(--font-color);
+}
+
+#timeline {
     display: grid;
-    gap: 2rem;
-    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
 }
 
-.about {
+.event:nth-child(even) {
+    border-left: 5px solid black;
+    grid-column: 2/3;
+    padding-left: 1rem;
+}
+
+.event:nth-child(odd) {
     grid-column: 1/2;
-    grid-row: 1/3;
+    text-align: end;
+    padding-right: 1rem;
 }
 
-iframe {
-    align-self: end;
-    grid-column: 2/3;
-}
-
-.helpfulLinks {
+.event p:nth-child(odd) {
+    text-decoration: underline;
     font-size: 1.2rem;
-    grid-column: 2/3;
-}
-
-li {
-    padding: .2rem;
-}
-
-.wikiQuote {
-    font-style: italic;
+    color: var(--primary-color);
+    font-weight: bolder;
 }
 
 footer {
@@ -138,17 +137,6 @@ footer p {
 }
 
 @media only screen and (max-width: 1000px) {
-    .about, iframe, .helpfulLinks {
-        grid-column: 1/2;
-    }
-
-    iframe {
-        justify-self: center;
-    }
-
-    .helpfulLinks {
-        font-size: 1rem;
-    }
 
     #quote {
         grid-column: 1/4;
@@ -165,12 +153,7 @@ footer p {
     .hero img {
         opacity: 1;
     }
-
-    h1 {
-        padding-right: 9rem;
-        padding-left: 9rem;
-    }
-
+    
     .navigation a {
         display: none;
     }

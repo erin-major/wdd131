@@ -4,7 +4,8 @@ const quote = document.querySelector("#quote");
 const level = document.querySelector("#level");
 const menu = document.querySelector("#menu");
 const nav = document.querySelector(".navigation");
-const heading = document.querySelector("#heading")
+const heading = document.querySelector("#heading");
+const timeline = document.querySelector('#timeline');
 
 menu.addEventListener("click", () => {
     menu.classList.toggle("open");
@@ -59,6 +60,34 @@ const quotes = [
     }
 ];
 
+const events = [
+    {
+        Date: "2008",
+        Event: "Karen Collins published 'Game Sound: An Introduction to the History, Theory and Practice of Video Game Music and Sound Design.'"
+    },
+    {
+        Date: "August 2011",
+        Event: "The Ludomusicology Research Group was founded."
+    },
+    {
+        Date: "April 2012",
+        Event: "The Ludomusicology Research Group held its inaugural conference at the University of Oxford."
+    },
+    {
+        Date: "January 2014",
+        Event: "The North American Conference on Video Game Music held its inaugural conference at Youngstown State University."
+    },
+    {
+        Date: "December 2016",
+        Event: "The Society for the Study of Sound and Music in Games was founded."
+    },
+    {
+        Date: "Winter 2020",
+        Event: "The first edition of the Journal of Sound and Music in Games was published."
+    },
+
+];
+
 function displayQuote(quotes) {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     quote.innerHTML = `
@@ -76,14 +105,28 @@ function levelUp() {
         console.log(nextLevel);
         localStorage.setItem('userVisits', nextLevel.toString());
     }
-}
+};
 
 function getLevel() {
     return localStorage.getItem('userVisits');
-}
+};
+
+function displayTimeline(events) {
+    const html = events.map(
+        (event) => `
+        <div class="event">
+            <p>${event.Date}</p>
+            <p>${event.Event}</p>
+        </div>
+        <div class="event"></div>
+        <div class="event"></div>`
+  );
+  timeline.innerHTML = html.join("");
+};
 
 levelUp();
 displayQuote(quotes);
+displayTimeline(events);
 
 const today = new Date();
 

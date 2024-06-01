@@ -4,7 +4,7 @@ const quote = document.querySelector("#quote");
 const level = document.querySelector("#level");
 const menu = document.querySelector("#menu");
 const nav = document.querySelector(".navigation");
-const heading = document.querySelector("#heading")
+const heading = document.querySelector("#heading");
 
 menu.addEventListener("click", () => {
     menu.classList.toggle("open");
@@ -76,11 +76,11 @@ function levelUp() {
         console.log(nextLevel);
         localStorage.setItem('userVisits', nextLevel.toString());
     }
-}
+};
 
 function getLevel() {
     return localStorage.getItem('userVisits');
-}
+};
 
 levelUp();
 displayQuote(quotes);
