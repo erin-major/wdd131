@@ -73,7 +73,6 @@ function levelUp() {
     }
     else {
         const nextLevel = parseInt(userLevel) + 1;
-        console.log(nextLevel);
         localStorage.setItem('userVisits', nextLevel.toString());
     }
 };
