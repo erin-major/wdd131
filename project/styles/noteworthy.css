@@ -131,6 +131,10 @@ footer p {
     margin-top: 0;
 }
 
+footer a {
+    font-size: 1.5rem;
+}
+
 #level {
     font-size: 1.5rem;
     color: var(--secondary-color);
