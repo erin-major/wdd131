@@ -31,42 +31,44 @@ h1 {
     grid-column: 1/2;
     grid-row: 1/2;
     z-index: 1;   
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 1.5rem;
     width: 320px;
     border-radius: 0 40px 40px 0;
 }
 
-nav {
+#menu {
+    display: none;
+}
+
+.navigation {
     grid-column: 3/4;
     grid-row: 1/2;
     display: flex;
     align-items: center;
 }
 
-nav a {
+.navigation a {
     flex: 1 1 auto;
-    background-color: var(--primary-color);
     z-index: 1;
     font-size: 1.5rem;
     padding: 1.5rem;
     text-decoration: none;
     color: var(--font-color);
+    background-color: var(--background-color);
 }
 
-nav a:link, nav a:visited {
+a:link, a:visited {
     color: var(--font-color);
 }
 
-nav a:first-child {
-    border-radius: 40px 0 0 40px;
+a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
 }
 
-nav a:hover {
-    text-decoration: underline;
-    font-size: 2rem;
-    padding: 1.2rem;
-    
+.navigation a:first-child {
+    border-radius: 40px 0 0 40px;
 }
 
 #quote {
@@ -75,58 +77,49 @@ nav a:hover {
     grid-column: 1/3;
     z-index: 1;
     text-align: left;
-    padding-left: 2rem;
+    padding: 0 2rem;
     font-size: 1.2rem;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 0 40px 0 0;
     opacity: .9;
+    color: white;
 }
 
 .text {
     font-style: italic;
 }
 
-/* #menu {
-    font-size: 1.5rem;
-    border: 0;
-    background: none;
-    color: black;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+main {
+    background-color: var(--background-color);
+    font-family: var(--paragraph-font);
+    color: var(--font-color);
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
 }
 
-#menu::before {
-    content: "☰"
+.about {
+    grid-column: 1/2;
+    grid-row: 1/3;
 }
 
-#menu.open::before {
-    content: "❌"
+iframe {
+    align-self: end;
+    grid-column: 2/3;
 }
 
-.navigation {
-    display: flex;
-    flex-direction: column;
+.helpfulLinks {
+    font-size: 1.2rem;
+    grid-column: 2/3;
 }
 
-.navigation a {
-    display: none;
-    font-size: 2em;
-    padding: .4em 0em;
-    text-decoration: none;
-    color: black;
-    border: 2px solid var(--tertiary-color);
-    background-color: var(--tertiary-color);
+li {
+    padding: .2rem;
 }
 
-.navigation a:hover {
-    background-color: var(--secondary-color);
-    text-decoration: underline var(--accent1-color);
+.wikiQuote {
+    font-style: italic;
 }
-
-.open a {
-    display: block;
-} */
 
 footer {
     font-family: var(--paragraph-font);
@@ -136,4 +129,84 @@ footer {
 
 footer p {
     margin-top: 0;
+}
+
+#level {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-shadow: var(--secondary-color) 1px 0 10px; 
+}
+
+@media only screen and (max-width: 1000px) {
+    .about, iframe, .helpfulLinks {
+        grid-column: 1/2;
+    }
+
+    iframe {
+        justify-self: center;
+    }
+
+    .helpfulLinks {
+        font-size: 1rem;
+    }
+
+    #quote {
+        grid-column: 1/4;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .hero {
+        grid-row: 2/3;
+    }
+
+    .hero img {
+        opacity: 1;
+    }
+    
+    .navigation a {
+        display: none;
+    }
+
+    #menu {
+    display: block;
+    font-size: 3rem;
+    border: 0;
+    background: none;
+    color: var(--secondary-color);
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+    z-index: 2;
+    }
+
+    #menu::before {
+        content: "☰"
+    }
+    
+    #menu.open::before {
+        content: "❌";
+        font-size: 2rem;
+    }
+
+    .navigation.open {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/4;
+        background-color: var(--background-color);
+        z-index: 1;
+        margin-top: 2rem;
+    }
+    
+    .open a {
+        display: block;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    h1.open {
+        display: none;
+    }
 }

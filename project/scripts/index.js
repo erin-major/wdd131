@@ -1,11 +1,16 @@
 const year = document.querySelector("#currentyear");
 const modifiedDate = document.querySelector("#lastModified");
 const quote = document.querySelector("#quote");
+const level = document.querySelector("#level");
+const menu = document.querySelector("#menu");
+const nav = document.querySelector(".navigation");
+const heading = document.querySelector("#heading")
 
-const today = new Date();
-
-year.innerHTML = `©️ <span id="currentyear">${today.getFullYear()}</span> | Erin Major | Utah, United States`;
-modifiedDate.innerHTML = `Last Modification: ${today}`;
+menu.addEventListener("click", () => {
+    menu.classList.toggle("open");
+    nav.classList.toggle("open");
+    heading.classList.toggle("open");
+});
 
 const quotes = [ 
     {
@@ -61,4 +66,27 @@ function displayQuote(quotes) {
     <p>-${randomQuote.Name}</p>`
 };
 
+function levelUp() {
+    const userLevel = localStorage.getItem('userVisits');
+    if (userLevel == null) {
+        localStorage.setItem('userVisits', '1');
+    }
+    else {
+        const nextLevel = parseInt(userLevel) + 1;
+        console.log(nextLevel);
+        localStorage.setItem('userVisits', nextLevel.toString());
+    }
+}
+
+function getLevel() {
+    return localStorage.getItem('userVisits');
+}
+
+levelUp();
 displayQuote(quotes);
+
+const today = new Date();
+
+year.innerHTML = `©️ <span id="currentyear">${today.getFullYear()}</span> | Erin Major | Utah, United States`;
+modifiedDate.innerHTML = `Last Modification: ${today}`;
+level.innerHTML = `Congratulations! You're level ${getLevel()}!`;
