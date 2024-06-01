@@ -1,0 +1,25 @@
+:root {
+    --primary-color: #0F4880;
+    --secondary-color: #FF9F1C;    
+    --background-color: #FBFEFB;
+    --font-color: #1C2833;
+
+    --heading-font: 'Cormorant Garamond Regular', serif;
+    --paragraph-font: 'Proza Libre', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+h1 {
+    font-family: var(--heading-font);
+    margin: 1rem;
+}
+
+p {
+    font-family: var(--paragraph-font);
+    margin: 2rem;
+}
+
